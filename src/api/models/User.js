@@ -44,7 +44,7 @@ module.exports = {
     },
 
     Point: {
-      type: 'float',
+      type: 'number',
       required: true
     },
 

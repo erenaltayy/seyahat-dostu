@@ -30,13 +30,13 @@ module.exports = {
 
 
     Price: {
-      type: 'float',
+      type: 'number',
       required: true
     },
 
 
     Number_of_Ppl: {
-      type: 'int',
+      type: 'number',
       required: true
     },
 
@@ -77,7 +77,7 @@ module.exports = {
     },
 
     Driver_Point: {
-      type: 'float',
+      type: 'number',
       required: true
     },
 

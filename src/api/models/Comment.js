@@ -12,25 +12,25 @@ module.exports = {
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
-    
+
     From_ID: {
       type: 'string',
       required: true
     },
 
-    
+
     To_ID: {
       type: 'string',
       required: true
     },
 
-    
+
     Point: {
-      type: 'integer',
+      type: 'number',
       required: true
     },
 
-    
+
     Comment: {
       type: 'string',
       required: true
