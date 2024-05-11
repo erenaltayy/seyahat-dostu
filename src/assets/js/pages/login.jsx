@@ -1,10 +1,6 @@
-import Navbar from '@/components/Navbar'
-
 export default function Login() {
   return (
     <div className="flex f-screen flex-col items-center justify-center space-y-8 text-center text-gray-700">
-      <Navbar></Navbar>
-
       <div className="container mx-auto p-8">
         <div className="bg-white shadow-md rounded-lg overflow-hidden w-full md:w-1/2 mx-auto">
           <div className="p-8">
