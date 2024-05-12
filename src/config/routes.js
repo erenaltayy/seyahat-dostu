@@ -36,6 +36,7 @@ module.exports.routes = {
    'GET /sign_up': 'pages/sign_up/index',
    'GET /profile': 'pages/profile/index',
 
+   'GET /ride': 'pages/ride/index',
    'GET /rides': 'pages/rides/index',
    'GET /my_rides': 'pages/my_rides/index',
    'GET /book': 'pages/book/index',
