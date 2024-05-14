@@ -2,8 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-  body{
-    @apply bg-ring-pattern;
+@layer base {
+  body {
+    @apply line-pattern;
   }
+}
+
+.line-pattern {
+  background:
+    linear-gradient(135deg, #0000 18.75%, #ffffff 0 31.25%, #0000 0),
+    repeating-linear-gradient(45deg, #ffffff -6.25% 6.25%, #fafaff 0 18.75%);
+  background-size: 60px 60px;
 }
