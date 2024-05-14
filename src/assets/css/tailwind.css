@@ -14,3 +14,14 @@
     repeating-linear-gradient(45deg, #ffffff -6.25% 6.25%, #fafaff 0 18.75%);
   background-size: 60px 60px;
 }
+
+.snake-pattern {
+  background: conic-gradient(at 62.5% 12.5%, #1e40af 25%, #0000 0) calc(27px/-8) calc(27px/2),
+    conic-gradient(at 62.5% 12.5%, #1e40af 25%, #0000 0) calc(-3*27px/8) calc(27px/4),
+    conic-gradient(at 87.5% 62.5%, #1e40af 25%, #0000 0) calc(3*27px/8) calc(27px/4),
+    conic-gradient(at 87.5% 62.5%, #1e40af 25%, #0000 0) calc(27px/-8) 0,
+    conic-gradient(at 25% 12.5%, #1e40af 25%, #0000 0) 0 calc(27px/-4),
+    conic-gradient(at 25% 12.5%, #1e40af 25%, #0000 0) calc(27px/-4) 0,
+    conic-gradient(at 87.5% 87.5%, #1e40af 25%, #0000 0) calc(27px/8) 0 #1e3a8a;
+  background-size: 27px 27px;
+}

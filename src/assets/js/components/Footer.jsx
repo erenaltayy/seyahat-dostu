@@ -29,7 +29,7 @@ export default function Footer() {
           <br></br>
         </div>
       </div>
-      <div className="bg-blue-800 p-4 text-white text-center bg-cross-pattern">
+      <div className="bg-blue-800 p-4 text-white text-center snake-pattern">
         <p>Seyahat Dostu &copy; 2024</p>
       </div>
     </footer>
