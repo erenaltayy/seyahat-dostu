@@ -21,7 +21,7 @@ export default function Navbar() {
     };
   }, []);
   return (
-    <nav ref={menuRef}className="bg-gray-800 w-screen">
+    <nav ref={menuRef} className="bg-gray-800 w-screen">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -43,10 +43,10 @@ export default function Navbar() {
               </a>
             </div>
             <div className="hidden sm:ml-6 sm:flex space-x-4 justify-center items-center">
-              <a href="#" className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Dashboard</a>
-              <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Team</a>
-              <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
-              <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Calendar</a>
+              <a href="/my_rides" className="text-white bg-yellow-600 hover:bg-yellow-300 hover:text-black rounded-md px-3 py-2 text-sm font-medium transition">Yolculuklarım</a>
+              <a href="/reservations" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium transition" aria-current="page">Rezervasyonlarım</a>
+              <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium transition">Projects</a>
+              <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium transition">Calendar</a>
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -61,11 +61,11 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      <div  className={`${show ? 'h-44' : 'h-0'} transition-all overflow-hidden space-y-1 px-2 sm:hidden`} id="mobile-menu">
-        <a href="#" className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
-        <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Takım</a>
-        <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projeler</a>
-        <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Takvim</a>
+      <div className={`${show ? 'h-44' : 'h-0'} transition-all overflow-hidden space-y-1 px-4 sm:hidden`} id="mobile-menu">
+        <a href="/my_rides" className="text-white bg-yellow-600 hover:bg-yellow-300 hover:text-black block rounded-md px-3 py-2 text-base font-medium transition">Yolculuklarım</a>
+        <a href="/reservations" className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium transition" aria-current="page">Rezervasyonlarım</a>
+        <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium transition">Projeler</a>
+        <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium transition">Takvim</a>
       </div>
     </nav>
   )
