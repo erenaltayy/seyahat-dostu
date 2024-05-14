@@ -30,11 +30,11 @@ export default function NavbarKullaniciMenu() {
           </img>
         </button>
       </div>
-      <div className={`${show ? 'h-32' : 'h-0'} overflow-hidden transition-all absolute right-0 z-10 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}>
+      <div className={`${show ? 'h-32 rounded-md shadow-lg ring-1 ring-black ring-opacity-5' : 'h-0'} overflow-hidden transition-all absolute right-0 z-10 w-48 origin-top-right bg-white focus:outline-none`}>
         <div className="" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button">
-          <a href="/profile" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" id="user-menu-item-0">Profil</a>
-          <a href="#" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" id="user-menu-item-1">Ayarlar</a>
-          <a href="#" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" id="user-menu-item-2">Çıkış Yap</a>
+          <a href="/profile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-200 m-1 rounded transition-all" role="menuitem" id="user-menu-item-0">Profil</a>
+          <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-200 m-1 rounded transition-all" role="menuitem" id="user-menu-item-1">Ayarlar</a>
+          <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-200 m-1 rounded transition-all" role="menuitem" id="user-menu-item-2">Çıkış Yap</a>
         </div>
       </div>
     </div>
