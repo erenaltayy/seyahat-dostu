@@ -23,9 +23,9 @@ export default function SikcaSorulanSorular(){
           answer: "Seyahat Dostu uygulaması ücretsizdir. Ancak, sürücüler yolculuk başına belirli bir ücret talep edebilir. Ücretler, yolculuk detaylarında açıkça belirtilir."
         },
       ];
-    
+
       return (
-        <section className="max-w-4xl mx-auto py-10 px-5">
+        <section id="SSS" className="max-w-4xl mx-auto py-10 px-5">
           <h1 className="text-4xl font-bold mb-8 text-center">Sıkça Sorulan Sorular</h1>
           {sssData.map((sss, index) => (
             <SoruKarti key={index} question={sss.question} answer={sss.answer} />

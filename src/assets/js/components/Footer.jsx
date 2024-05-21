@@ -1,4 +1,3 @@
-
 import SosyalMedyaButonu from '@/components/SosyalMedyaButonu';
 
 export default function Footer() {
@@ -25,7 +24,7 @@ export default function Footer() {
               <a href="#" className="text-center bg-gray-700 hover:bg-gray-900 border-gray-700 border-solid border-2 text-white px-3 py-2 text-sm font-medium rounded-full w-40 transition">
                 Gizlilik Politikası
               </a>
-              <a href="#" className="text-center bg-gray-700 hover:bg-gray-900 border-gray-700 border-solid border-2 text-white px-3 py-2 text-sm font-medium rounded-full w-40 transition">
+              <a href="/#SSS" className="text-center bg-gray-700 hover:bg-gray-900 border-gray-700 border-solid border-2 text-white px-3 py-2 text-sm font-medium rounded-full w-40 transition">
                 SSS
               </a>
             </div>
@@ -56,7 +55,7 @@ export default function Footer() {
                 Proje
               </div>
               <div className="flex justify-center mb-4">
-                <SosyalMedyaButonu type="Github" url="https://www.linkedin.com" color="blue" />
+                <SosyalMedyaButonu type="Github" url="https://www.github.com/enfyna/seyahat-dostu" color="blue" />
                 <SosyalMedyaButonu type="Linkedin" url="https://www.linkedin.com" color="blue" />
               </div>
             </div>
