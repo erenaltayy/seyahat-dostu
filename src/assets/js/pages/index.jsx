@@ -1,16 +1,18 @@
 import { Link } from '@inertiajs/react'
 import TanitimKartlari from '@/components/TanitimKartlari'
 import SikcaSorulanSorular from '@/components/SikcaSorulanSorular'
+import FormAlani from '@/components/FormAlani'
 
 export default function Index() {
   return (
     <div className="flex flex-col justify-center gap-y-24 my-12 w-screen">
+      <FormAlani></FormAlani>
       <div className="flex flex-row justify-center align-middle bg-white shadow-md p-2 w-3/4 rounded-full border-gray-300 border mx-auto">
         <Link href="/search" className="text-purple-600 no-underline">
           Seyahat Ara
         </Link>
       </div>
-
+      
       <TanitimKartlari></TanitimKartlari>
       <SikcaSorulanSorular></SikcaSorulanSorular>
 
