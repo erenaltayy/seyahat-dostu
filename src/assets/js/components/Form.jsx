@@ -31,7 +31,7 @@ export default function Form() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center">
+    <div className="flex items-center justify-center">
       <div className="bg-gray-900 p-8 rounded-lg shadow-lg max-w-md w-full">
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div>
