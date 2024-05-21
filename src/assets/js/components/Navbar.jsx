@@ -37,9 +37,9 @@ export default function Navbar() {
             </button>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center justify-center rounded aspect-square p-1 hover:bg-gray-900">
+            <div className="rounded-full aspect-square">
               <a href="/">
-                <img className="h-8 w-8" src="/images/logo.png" alt="Seyahat Dostu"></img>
+                <img className="h-12 w-12" src="/images/logo.png" alt="Seyahat Dostu"></img>
               </a>
             </div>
             <div className="hidden sm:ml-6 sm:flex space-x-4 justify-center items-center">
