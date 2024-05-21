@@ -15,13 +15,35 @@
   background-size: 60px 60px;
 }
 
-.snake-pattern {
-  background: conic-gradient(at 62.5% 12.5%, #1e40af 25%, #0000 0) calc(27px/-8) calc(27px/2),
-    conic-gradient(at 62.5% 12.5%, #1e40af 25%, #0000 0) calc(-3*27px/8) calc(27px/4),
-    conic-gradient(at 87.5% 62.5%, #1e40af 25%, #0000 0) calc(3*27px/8) calc(27px/4),
-    conic-gradient(at 87.5% 62.5%, #1e40af 25%, #0000 0) calc(27px/-8) 0,
-    conic-gradient(at 25% 12.5%, #1e40af 25%, #0000 0) 0 calc(27px/-4),
-    conic-gradient(at 25% 12.5%, #1e40af 25%, #0000 0) calc(27px/-4) 0,
-    conic-gradient(at 87.5% 87.5%, #1e40af 25%, #0000 0) calc(27px/8) 0 #1e3a8a;
-  background-size: 27px 27px;
+.animated-pattern {
+  --s: 50vmin;
+  --p: calc(var(--s) / 2);
+  --d: 16000ms;
+  --e: linear;
+
+  background-color: #1f2937;
+  background-image:
+    linear-gradient(225deg, transparent 90%, #ff1188 90%),
+    linear-gradient(225deg, #2bc0d6 10%, transparent 10%);
+  background-size: var(--s) var(--s);
+  animation:
+    position var(--d) var(--e) infinite;
+}
+
+@keyframes position {
+  0% {
+    background-position:
+      calc(var(--p) * -1) calc(var(--p) * 0);
+  }
+
+  100% {
+    background-position:
+      calc(var(--p) * -5) calc(var(--p) * 16);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .animated-pattern {
+    animation: none;
+  }
 }

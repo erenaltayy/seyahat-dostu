@@ -1,37 +1,72 @@
+
+import SosyalMedyaButonu from '@/components/SosyalMedyaButonu';
+
 export default function Footer() {
   return (
-    <footer className="flex flex-col h-[50vh] bg-blue-900">
-      <div className="h-1 bg-blue-300"></div>
-      <div className="container flex flex-col space-y-4 h-full w-full m-auto p-8 lg:flex-row justify-between items-center">
-        <div className="flex justify-center mt-4 lg:mt-0">
-          <ul className="flex space-x-4">
-            <li>
-              <a href="#" className="bg-blue-900 hover:bg-blue-700 border-blue-700 border-solid border-2 text-white  px-3 py-2 text-sm font-medium">
-                About
+    <footer className="flex flex-col justify-center animated-pattern">
+      <div className="w-screen">
+        <div className="lg:container mx-auto min-h-[25vh]">
+          <div className="min-h-[13vh] p-2 mt-8">
+            <div className="h-full w-full font-extrabold text-center text-6xl lg:text-7xl/relaxed text-gray-50">
+              Seyahat Dostu
+            </div>
+            <div className="text-center text-md lg:text-2xl/relaxed text-gray-400">
+              Yolculuk yapmanın yeni ve keyifli hali.
+            </div>
+          </div>
+          <div className="flex flex-row flex-wrap justify-between p-2 py-12 gap-8">
+            <div className="basis-full md:basis-3/5 text-gray-100">
+              Seyahat Dostu, paylaşımlı yolculuklarla bireysel yolculuk maliyetlerini azaltmanın ve yeni insanlarla tanışmanın harika bir yoludur. Güvenlik önlemleri ve kullanıcı değerlendirmeleri sayesinde güvenli ve güvenilir bir seyahat deneyimi sunar. WEB tabanlı altyapısı sayesinde her yerden erişim imkanı sağlar.
+            </div>
+            <div className="flex flex-row flex-wrap gap-4 basis-full md:basis-1/5 justify-center items-center">
+              <a href="#" className="text-center bg-gray-700 hover:bg-gray-900 border-gray-700 border-solid border-2 text-white px-3 py-2 text-sm font-medium rounded-full w-40 transition">
+                Hakkımızda
               </a>
-            </li>
-            <li>
-              <a href="#" className="bg-blue-900 hover:bg-blue-700 border-blue-700 border-solid border-2 text-white  px-3 py-2 text-sm font-medium">
-                Services
+              <a href="#" className="text-center bg-gray-700 hover:bg-gray-900 border-gray-700 border-solid border-2 text-white px-3 py-2 text-sm font-medium rounded-full w-40 transition">
+                Gizlilik Politikası
               </a>
-            </li>
-            <li>
-              <a href="#" className="bg-blue-900 hover:bg-blue-700 border-blue-700 border-solid border-2 text-white  px-3 py-2 text-sm font-medium">
-                Contact
+              <a href="#" className="text-center bg-gray-700 hover:bg-gray-900 border-gray-700 border-solid border-2 text-white px-3 py-2 text-sm font-medium rounded-full w-40 transition">
+                SSS
               </a>
-            </li>
-          </ul>
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row justify-center mt-4 w-full min-h-[10vh]">
+            <div className="border-gray-400  w-full lg:w-1/3 p-2 flex flex-col">
+              <div className="text-gray-100 text-lg font-bold text-center">
+                Sosyal Medya
+              </div>
+              <div className="flex justify-center mb-4">
+                <SosyalMedyaButonu type="Instagram" url="https://github.com/enfyna/seyahat-dostu" color="red" />
+                <SosyalMedyaButonu type="X" url="https://www.linkedin.com" color="blue" />
+                <SosyalMedyaButonu type="Snapchat" url="https://www.linkedin.com" color="yellow" />
+              </div>
+            </div>
+            <div className="border-gray-400 border-t-2 sm:border-x-2 sm:border-t-0 w-full lg:w-1/3 p-2 flex flex-col">
+              <div className="text-gray-100 text-lg font-bold text-center">
+                İletişim
+              </div>
+              <div className="flex justify-center mb-4">
+                <SosyalMedyaButonu type="Whatsapp" url="https://www.linkedin.com" color="green" />
+                <SosyalMedyaButonu type="Telegram" url="https://www.linkedin.com" color="blue" />
+                <SosyalMedyaButonu type="Messenger" url="https://www.linkedin.com" color="blue" />
+              </div>
+            </div>
+            <div className="border-gray-400 border-t-2 sm:border-t-0 w-full lg:w-1/3 p-2 flex flex-col">
+              <div className="text-gray-100 text-lg font-bold text-center">
+                Proje
+              </div>
+              <div className="flex justify-center mb-4">
+                <SosyalMedyaButonu type="Github" url="https://www.linkedin.com" color="blue" />
+                <SosyalMedyaButonu type="Linkedin" url="https://www.linkedin.com" color="blue" />
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="text-center text-white">
-          <p>Address: 123 Main St, City, Country</p>
-          <p>Email: info@example.com</p>
-          <p>Phone: +1234567890</p>
-          <br></br>
+        <div className="w-screen p-4 text-red-600 text-center text-xl/relaxed">
+          <p>❤</p>
         </div>
-      </div>
-      <div className="bg-blue-800 p-4 text-white text-center snake-pattern">
-        <p>Seyahat Dostu &copy; 2024</p>
       </div>
     </footer>
-  )
+  );
 }
+
