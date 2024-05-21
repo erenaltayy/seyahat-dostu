@@ -1,5 +1,6 @@
 import { Link } from '@inertiajs/react'
 import TanitimKartlari from '@/components/TanitimKartlari'
+import SikcaSorulanSorular from '@/components/SikcaSorulanSorular'
 
 export default function Index() {
   return (
@@ -11,6 +12,7 @@ export default function Index() {
       </div>
 
       <TanitimKartlari></TanitimKartlari>
+      <SikcaSorulanSorular></SikcaSorulanSorular>
 
       <div className="flex flex-row justify-between bg-blue-200 shadow-md overflow-hidden w-full">
         <div className="p-8">
