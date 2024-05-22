@@ -1,4 +1,3 @@
-import Logo from '@/components/Logo'
 import SignupForm from '@/components/SignUpForm'
 
 export default function Index() {
