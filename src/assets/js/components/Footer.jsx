@@ -2,7 +2,7 @@ import SosyalMedyaButonu from '@/components/SosyalMedyaButonu';
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col justify-center animated-pattern">
+    <footer className="flex flex-col justify-center footer-pattern">
       <div className="w-screen">
         <div className="lg:container mx-auto min-h-[25vh]">
           <div className="min-h-[13vh] p-2 mt-8">

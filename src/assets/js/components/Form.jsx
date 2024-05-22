@@ -95,7 +95,7 @@ export default function Form() {
               type="submit"
               className={`w-full py-3 bg-teal-500 text-white font-semibold rounded-md hover:bg-teal-600 transition duration-200 ease-in-out ${shake ? 'shake' : ''}`}
             >
-              Ara
+              Ara →
             </button>
           </div>
         </form>

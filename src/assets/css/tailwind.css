@@ -2,20 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply line-pattern;
+.form-pattern {
+  --s: 10vh;
+  --p: calc(var(--s) / 2);
+  --d: 16000ms;
+  --e: linear;
+
+  background-image:
+    linear-gradient(315deg, #fff 40%, transparent  40%),
+    linear-gradient(45deg, #14b8a6 40%, #fff 40%);
+  background-size: var(--p);
+  background-position-y: var(--p);
+  background-repeat: repeat;
+  animation:
+    position_form var(--d) var(--e) infinite;
+}
+
+@keyframes position_form {
+  0% {
+    background-position-x:
+      0%;
+  }
+
+  100% {
+    background-position-x:
+      100%;
   }
 }
 
-.line-pattern {
-  background:
-    linear-gradient(135deg, #0000 18.75%, #ffffff 0 31.25%, #0000 0),
-    repeating-linear-gradient(45deg, #ffffff -6.25% 6.25%, #fafaff 0 18.75%);
-  background-size: 60px 60px;
-}
-
-.animated-pattern {
+.footer-pattern {
   --s: 50vmin;
   --p: calc(var(--s) / 2);
   --d: 16000ms;
@@ -43,7 +58,9 @@
 }
 
 @media (prefers-reduced-motion) {
-  .animated-pattern {
+
+  .footer-pattern,
+  .form-pattern {
     animation: none;
   }
 }
@@ -59,11 +76,23 @@
   animation: shake 0.5s;
   animation-iteration-count: 1;
 }
+
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  50% { transform: translateX(5px); }
-  75% { transform: translateX(-5px); }
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  75% {
+    transform: translateX(-5px);
+  }
 }
-
-
