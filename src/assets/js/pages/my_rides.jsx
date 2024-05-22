@@ -1,22 +1,31 @@
-import { Link } from '@inertiajs/react'
-import Navbar from '@/components/Navbar'
-import Logo from '@/components/Logo'
+import BeklemedeYolculukKarti from '@/components/BeklemedeYolculukKarti'
+import AktifYolculukKarti from '@/components/AktifYolculukKarti'
 
-export default function Index() {
+export default function MyRides() {
   return (
-    <div className="flex f-screen flex-col items-center justify-center space-y-8 text-center text-gray-700">
-      <Navbar></Navbar>
+    <div className="flex f-screen flex-col space-y-8 text-gray-700 my-12">
 
-      <Link href="/search" className="text-purple-600 underline">
-        Seyahat Bul
-      </Link>
-
-      <div className="flex flex-row items-center justify-center space-x-8">
-        <Logo url="tailwind.com" name="tailwind"></Logo>
-        <Logo url="tailwind.com" name="tailwind"></Logo>
-        <Logo url="tailwind.com" name="tailwind"></Logo>
-        <Logo url="tailwind.com" name="tailwind"></Logo>
+      <div className="p-4 border-b border-black">
+        <h1 className="font-bold text-black">Aktif Yolculuklarım</h1>
       </div>
+      <div className="flex flex-row gap-4 p-4 flex-wrap">
+        <AktifYolculukKarti></AktifYolculukKarti>
+        <AktifYolculukKarti></AktifYolculukKarti>
+        <AktifYolculukKarti></AktifYolculukKarti>
+        <AktifYolculukKarti></AktifYolculukKarti>
+      </div>
+
+      <div className="p-4 border-b border-black">
+        <h1 className="font-bold text-black">Beklemede</h1>
+      </div>
+      <div className="flex flex-row gap-4 p-4 flex-wrap">
+        <BeklemedeYolculukKarti></BeklemedeYolculukKarti>
+        <BeklemedeYolculukKarti></BeklemedeYolculukKarti>
+        <BeklemedeYolculukKarti></BeklemedeYolculukKarti>
+        <BeklemedeYolculukKarti></BeklemedeYolculukKarti>
+        <BeklemedeYolculukKarti></BeklemedeYolculukKarti>
+      </div>
+
 
     </div>
   )

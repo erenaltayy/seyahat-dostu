@@ -13,7 +13,7 @@ module.exports = {
 
   fn: async function () {
     return {
-      page: 'sign_up',
+      page: 'signup',
       props: {
         //name: 'Inertia'
       }

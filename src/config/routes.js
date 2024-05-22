@@ -33,9 +33,10 @@ module.exports.routes = {
    'GET /example': 'pages/example/index',
 
    'GET /login': 'pages/login/index',
-   'GET /sign_up': 'pages/sign_up/index',
+   'GET /signup': 'pages/signup/index',
    'GET /profile': 'pages/profile/index',
 
+   'GET /ride': 'pages/ride/index',
    'GET /rides': 'pages/rides/index',
    'GET /my_rides': 'pages/my_rides/index',
    'GET /book': 'pages/book/index',

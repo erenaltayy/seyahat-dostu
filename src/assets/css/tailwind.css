@@ -1,3 +1,98 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.form-pattern {
+  --s: 10vh;
+  --p: calc(var(--s) / 2);
+  --d: 16000ms;
+  --e: linear;
+
+  background-image:
+    linear-gradient(315deg, #fff 40%, transparent  40%),
+    linear-gradient(45deg, #14b8a6 40%, #fff 40%);
+  background-size: var(--p);
+  background-position-y: var(--p);
+  background-repeat: repeat;
+  animation:
+    position_form var(--d) var(--e) infinite;
+}
+
+@keyframes position_form {
+  0% {
+    background-position-x:
+      0%;
+  }
+
+  100% {
+    background-position-x:
+      100%;
+  }
+}
+
+.footer-pattern {
+  --s: 50vmin;
+  --p: calc(var(--s) / 2);
+  --d: 16000ms;
+  --e: linear;
+
+  background-color: #1f2937;
+  background-image:
+    linear-gradient(225deg, transparent 90%, #ff1188 90%),
+    linear-gradient(225deg, #2bc0d6 10%, transparent 10%);
+  background-size: var(--s) var(--s);
+  animation:
+    position var(--d) var(--e) infinite;
+}
+
+@keyframes position {
+  0% {
+    background-position:
+      calc(var(--p) * -1) calc(var(--p) * 0);
+  }
+
+  100% {
+    background-position:
+      calc(var(--p) * -5) calc(var(--p) * 16);
+  }
+}
+
+@media (prefers-reduced-motion) {
+
+  .footer-pattern,
+  .form-pattern {
+    animation: none;
+  }
+}
+
+
+.form-input:focus {
+  outline: none;
+  box-shadow: 0 0 10px 2px #00f5ff;
+}
+
+/* Shake animation */
+.shake {
+  animation: shake 0.5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  75% {
+    transform: translateX(-5px);
+  }
+}
