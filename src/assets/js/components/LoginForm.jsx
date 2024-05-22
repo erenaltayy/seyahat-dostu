@@ -31,7 +31,7 @@ export default function LoginForm() {
   };
 
   const handleSignUpRedirect = () => {
-    window.location.href = '/sign_up';
+    window.location.href = '/signup';
   };
 
   return (
