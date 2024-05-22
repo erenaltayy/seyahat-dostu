@@ -97,6 +97,10 @@ export default function SignupForm() {
     return phone;
   };
 
+  const handleSignUpRedirect = () => {
+    window.location.href = '/login';
+  };
+
   return (
     <div className="flex items-center justify-center">
       <div className="bg-gray-900 p-8 rounded-lg shadow-lg max-w-md w-full">
@@ -190,9 +194,9 @@ export default function SignupForm() {
           )}
           {step === 2 && (
             <>
-               <div>
+              <div>
                 <label htmlFor="interests" className="block text-sm font-medium text-white text-center">Platformu etkin bir şekilde kullanabilmen için daha fazla bilgiye ihtiyacımız var ^_^</label>
-               </div>
+              </div>
               <div>
                 <label htmlFor="interests" className="block text-sm font-medium text-white">İlgi Alanları</label>
                 <div className="flex space-x-3 mt-1">
@@ -269,19 +273,19 @@ export default function SignupForm() {
               <div>
                 <label htmlFor="location" className="block text-sm font-medium text-white">Lokasyon</label>
                 <select
-                  
+
                   id="location"
                   name="location"
                   value={formData.location}
                   onChange={handleChange}
                   className="mt-1 block w-full p-3 bg-gray-800 text-white border border-gray-700 rounded-md form-input focus:border-teal-400 transition duration-200 ease-in-out hover:border-teal-400"
                 >
-                    <option value="">Seçiniz</option>
-                    <option value="istanbul">İstanbul</option>
-                    <option value="ankara">Ankara</option>
-                    <option value="izmir">İzmir</option>
-                    <option value="antalya">Antalya</option>
-                    <option value="adana">Adana</option>
+                  <option value="">Seçiniz</option>
+                  <option value="istanbul">İstanbul</option>
+                  <option value="ankara">Ankara</option>
+                  <option value="izmir">İzmir</option>
+                  <option value="antalya">Antalya</option>
+                  <option value="adana">Adana</option>
                 </select>
               </div>
               <div>
@@ -304,6 +308,9 @@ export default function SignupForm() {
               </div>
             </>
           )}
+          <div className="text-center mt-4 text-white">
+            Hesabınız var mu? <button onClick={handleSignUpRedirect} className="text-teal-400 hover:text-teal-500">Giriş Yap</button>
+          </div>
         </form>
       </div>
     </div>

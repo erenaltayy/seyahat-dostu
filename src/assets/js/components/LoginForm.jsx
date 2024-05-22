@@ -35,53 +35,51 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="flex items-center justify-center">
-      <div className="bg-gray-800 p-8 rounded-lg shadow-lg max-w-md w-full">
-        <form className="space-y-6" onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="username" className="block text-sm font-medium text-white">Kullanıcı Adı</label>
+    <div className="bg-gray-900 p-8 rounded-lg shadow-lg max-w-md w-full">
+      <form className="space-y-6" onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="username" className="block text-sm font-medium text-white">Kullanıcı Adı</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            value={formData.username}
+            onChange={handleChange}
+            className="mt-1 block w-full p-3 bg-gray-800 text-white border border-gray-600 rounded-md form-input focus:border-teal-400 transition duration-200 ease-in-out hover:border-teal-400"
+          />
+        </div>
+        <div>
+          <label htmlFor="password" className="block text-sm font-medium text-white">Şifre</label>
+          <div className="relative">
             <input
-              type="text"
-              id="username"
-              name="username"
-              value={formData.username}
+              type={showPassword ? 'text' : 'password'}
+              id="password"
+              name="password"
+              value={formData.password}
               onChange={handleChange}
-              className="mt-1 block w-full p-3 bg-gray-700 text-white border border-gray-600 rounded-md form-input focus:border-teal-400 transition duration-200 ease-in-out hover:border-teal-400"
+              className="mt-1 block w-full p-3 bg-gray-800 text-white border border-gray-600 rounded-md form-input focus:border-teal-400 transition duration-200 ease-in-out hover:border-teal-400"
             />
-          </div>
-          <div>
-            <label htmlFor="password" className="block text-sm font-medium text-white">Şifre</label>
-            <div className="relative">
-              <input
-                type={showPassword ? 'text' : 'password'}
-                id="password"
-                name="password"
-                value={formData.password}
-                onChange={handleChange}
-                className="mt-1 block w-full p-3 bg-gray-700 text-white border border-gray-600 rounded-md form-input focus:border-teal-400 transition duration-200 ease-in-out hover:border-teal-400"
-              />
-              <button
-                type="button"
-                onClick={() => setShowPassword(!showPassword)}
-                className="absolute inset-y-0 right-0 px-3 py-2 text-white"
-              >
-                {showPassword ? 'Gizle' : 'Göster'}
-              </button>
-            </div>
-          </div>
-          <div>
             <button
-              type="submit"
-              className={`w-full py-3 bg-teal-500 text-white font-semibold rounded-md hover:bg-teal-600 transition duration-200 ease-in-out ${shake ? 'shake' : ''}`}
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute inset-y-0 right-0 px-3 py-2 text-white"
             >
-              Giriş Yap
+              {showPassword ? 'Gizle' : 'Göster'}
             </button>
           </div>
-          <div className="text-center mt-4 text-white">
-            Hesabınız yok mu? <button onClick={handleSignUpRedirect} className="text-teal-400 hover:text-teal-500">Kaydol</button>
-          </div>
-        </form>
-      </div>
+        </div>
+        <div>
+          <button
+            type="submit"
+            className={`w-full py-3 bg-teal-500 text-white font-semibold rounded-md hover:bg-teal-600 transition duration-200 ease-in-out ${shake ? 'shake' : ''}`}
+          >
+            Giriş Yap
+          </button>
+        </div>
+        <div className="text-center mt-4 text-white">
+          Hesabınız yok mu? <button onClick={handleSignUpRedirect} className="text-teal-400 hover:text-teal-500">Kaydol</button>
+        </div>
+      </form>
     </div>
   );
 }
